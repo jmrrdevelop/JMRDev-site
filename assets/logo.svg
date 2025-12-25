@@ -7,14 +7,14 @@
     <!-- Letra J -->
     <text x="-35" y="0" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#6B7280" text-anchor="middle" dominant-baseline="middle">J</text>
     
-    <!-- Letra M personalizada con V convergente en la parte inferior -->
+    <!-- Letra M personalizada con V convergente en la parte superior -->
     <g transform="translate(0, 0)">
       <!-- Línea vertical izquierda de la M -->
       <line x1="-12" y1="-18" x2="-12" y2="18" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
       <!-- Línea vertical derecha de la M -->
       <line x1="12" y1="-18" x2="12" y2="18" stroke="#6B7280" stroke-width="6" stroke-linecap="round"/>
-      <!-- V convergente en la parte inferior (las líneas convergen) -->
-      <path d="M -12 18 L 0 8 L 12 18" fill="none" stroke="#6B7280" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- V convergente en la parte superior (las líneas convergen arriba) -->
+      <path d="M -12 -18 L 0 -8 L 12 -18" fill="none" stroke="#6B7280" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
     
     <!-- Letra R -->

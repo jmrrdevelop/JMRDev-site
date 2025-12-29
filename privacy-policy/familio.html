@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidad de Familio - Aplicación móvil para conectar familias">
+    <meta name="author" content="JMR Dev">
+    <title>Política de Privacidad - Familio | JMR Dev</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--spacing-lg) 0;
+        }
+        .privacy-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-md);
+        }
+        .privacy-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-top: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+        }
+        .privacy-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-top: var(--spacing-md);
+            margin-bottom: var(--spacing-sm);
+        }
+        .privacy-content p {
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.8;
+        }
+        .privacy-content ul, .privacy-content ol {
+            margin-bottom: var(--spacing-md);
+            padding-left: var(--spacing-md);
+        }
+        .privacy-content li {
+            margin-bottom: var(--spacing-xs);
+            line-height: 1.8;
+        }
+        .privacy-content strong {
+            font-weight: 600;
+            color: var(--color-text);
+        }
+        .privacy-content a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        .privacy-content a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            color: var(--color-text);
+        }
+        @media (max-width: 768px) {
+            .privacy-content h1 {
+                font-size: 2rem;
+            }
+            .privacy-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../assets/logo.svg" alt="JMR Dev Logo" class="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="privacy-content">
+                <a href="../familio.html" class="back-link">← Volver a Familio</a>
+                
+                <h1>Política de Privacidad de Familio</h1>
+                
+                <p><strong>Última actualización:</strong> 15 de enero de 2025</p>
+
+                <h2>1. Introducción</h2>
+                <p>Familio ("nosotros", "nuestra aplicación") es una aplicación móvil diseñada para conectar y gestionar la comunicación entre miembros de una familia. Esta Política de Privacidad describe cómo recopilamos, usamos y protegemos su información personal cuando utiliza nuestra aplicación.</p>
+                <p>Al utilizar Familio, usted acepta las prácticas descritas en esta política. Si no está de acuerdo con esta política, le rogamos que no utilice nuestra aplicación.</p>
+
+                <h2>2. Información que Recopilamos</h2>
+                
+                <h3>2.1. Datos de Ubicación</h3>
+                <ul>
+                    <li><strong>Tipo de datos:</strong> Coordenadas GPS (latitud y longitud) en tiempo real</li>
+                    <li><strong>Cuándo se recopila:</strong> Cuando el usuario activa la función de compartir ubicación</li>
+                    <li><strong>Permisos requeridos:</strong> <code>ACCESS_FINE_LOCATION</code>, <code>ACCESS_COARSE_LOCATION</code>, <code>ACCESS_BACKGROUND_LOCATION</code></li>
+                    <li><strong>Finalidad:</strong> Mostrar la posición de los miembros de la familia en el mapa compartido y enviar alertas cuando entren o salgan de geozonas definidas</li>
+                    <li><strong>Almacenamiento:</strong> Los datos de ubicación se almacenan en Firebase (servicio de Google) de forma temporal y se eliminan automáticamente después de un período determinado</li>
+                </ul>
+
+                <h3>2.2. Datos de Audio (Micrófono)</h3>
+                <ul>
+                    <li><strong>Tipo de datos:</strong> Audio capturado mediante el micrófono del dispositivo</li>
+                    <li><strong>Cuándo se recopila:</strong> Únicamente cuando el usuario presiona activamente el botón de micrófono para añadir ítems a la lista de compra por voz</li>
+                    <li><strong>Permisos requeridos:</strong> <code>RECORD_AUDIO</code></li>
+                    <li><strong>Finalidad:</strong> Convertir el habla del usuario en texto para añadir ítems a la lista de compra familiar</li>
+                    <li><strong>Procesamiento:</strong> El audio se procesa localmente en el dispositivo mediante la API de reconocimiento de voz del sistema operativo (Speech-to-Text). <strong>NO se graban ni almacenan conversaciones de forma pasiva</strong>. El audio se procesa en tiempo real y se descarta inmediatamente después de la conversión a texto.</li>
+                    <li><strong>Almacenamiento:</strong> Solo se almacena el texto resultante (nombre del ítem) en la lista de compra. El audio en sí no se almacena ni se transmite a servidores externos.</li>
+                </ul>
+
+                <h3>2.3. Datos de Cuenta y Perfil</h3>
+                <ul>
+                    <li><strong>Tipo de datos:</strong>
+                        <ul>
+                            <li>Nombre completo o apodo</li>
+                            <li>Dirección de correo electrónico</li>
+                            <li>Foto de perfil (opcional)</li>
+                            <li>Relación familiar (padre, madre, hijo, etc.)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cuándo se recopila:</strong> Durante el proceso de registro o cuando el usuario actualiza su perfil</li>
+                    <li><strong>Finalidad:</strong> Identificar a los miembros de la familia y personalizar la experiencia de la aplicación</li>
+                    <li><strong>Almacenamiento:</strong> Se almacenan de forma segura en Firebase Authentication y Firestore</li>
+                </ul>
+
+                <h3>2.4. Datos de Actividad en la Aplicación</h3>
+                <ul>
+                    <li><strong>Tipo de datos:</strong>
+                        <ul>
+                            <li>Lista de compra (ítems añadidos, comprados, etc.)</li>
+                            <li>Eventos del calendario familiar</li>
+                            <li>Geozonas creadas por el usuario</li>
+                            <li>Preferencias de notificaciones</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cuándo se recopila:</strong> Cuando el usuario utiliza las funciones de la aplicación</li>
+                    <li><strong>Finalidad:</strong> Proporcionar las funcionalidades principales de la aplicación (lista de compra compartida, calendario familiar, alertas de geozonas)</li>
+                    <li><strong>Almacenamiento:</strong> Se almacenan en Firebase Firestore y son accesibles solo para los miembros de la familia correspondiente</li>
+                </ul>
+
+                <h2>3. Finalidad del Tratamiento de Datos</h2>
+                <p>Utilizamos la información recopilada exclusivamente para:</p>
+                <ol>
+                    <li><strong>Funcionalidad de la Aplicación:</strong>
+                        <ul>
+                            <li>Permitir que los miembros de la familia compartan su ubicación en tiempo real</li>
+                            <li>Gestionar listas de compra compartidas</li>
+                            <li>Coordinar eventos y citas familiares</li>
+                            <li>Enviar alertas cuando los miembros entren o salgan de geozonas definidas</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mejora del Servicio:</strong>
+                        <ul>
+                            <li>Detectar y corregir errores técnicos</li>
+                            <li>Mejorar la experiencia del usuario</li>
+                        </ul>
+                    </li>
+                    <li><strong>Seguridad:</strong>
+                        <ul>
+                            <li>Prevenir fraudes y uso no autorizado</li>
+                            <li>Proteger la seguridad de los usuarios</li>
+                        </ul>
+                    </li>
+                </ol>
+                <p><strong>IMPORTANTE:</strong> No vendemos, alquilamos ni compartimos sus datos personales con terceros para fines publicitarios o comerciales.</p>
+
+                <h2>4. Servicios de Terceros</h2>
+                <p>Familio utiliza los siguientes servicios de terceros:</p>
+
+                <h3>4.1. Firebase (Google)</h3>
+                <ul>
+                    <li><strong>Servicios utilizados:</strong> Firebase Authentication, Cloud Firestore, Firebase Cloud Messaging</li>
+                    <li><strong>Datos compartidos:</strong> Información de cuenta, datos de ubicación, listas de compra, eventos, geozonas</li>
+                    <li><strong>Finalidad:</strong> Almacenamiento seguro de datos y autenticación de usuarios</li>
+                    <li><strong>Política de privacidad de Firebase:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+                </ul>
+
+                <h3>4.2. OpenStreetMap</h3>
+                <ul>
+                    <li><strong>Servicios utilizados:</strong> Tiles de mapas</li>
+                    <li><strong>Datos compartidos:</strong> Ninguno (solo se cargan mapas estáticos)</li>
+                    <li><strong>Finalidad:</strong> Mostrar mapas en la aplicación</li>
+                    <li><strong>Política de privacidad de OpenStreetMap:</strong> <a href="https://wiki.openstreetmap.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">https://wiki.openstreetmap.org/wiki/Privacy_Policy</a></li>
+                </ul>
+
+                <h3>4.3. RevenueCat (Opcional)</h3>
+                <ul>
+                    <li><strong>Servicios utilizados:</strong> Gestión de suscripciones premium</li>
+                    <li><strong>Datos compartidos:</strong> Identificador de usuario (si el usuario se suscribe)</li>
+                    <li><strong>Finalidad:</strong> Gestionar suscripciones y pagos</li>
+                    <li><strong>Política de privacidad de RevenueCat:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">https://www.revenuecat.com/privacy</a></li>
+                </ul>
+
+                <h2>5. Seguridad de los Datos</h2>
+                <p>Implementamos medidas de seguridad técnicas y organizativas para proteger sus datos personales:</p>
+                <ul>
+                    <li><strong>Cifrado:</strong> Los datos se transmiten mediante conexiones cifradas (HTTPS/TLS)</li>
+                    <li><strong>Autenticación:</strong> Utilizamos Firebase Authentication para proteger el acceso a las cuentas</li>
+                    <li><strong>Control de acceso:</strong> Solo los miembros autorizados de una familia pueden acceder a los datos de esa familia</li>
+                    <li><strong>Almacenamiento seguro:</strong> Los datos se almacenan en servidores seguros de Google Cloud Platform</li>
+                </ul>
+                <p>Sin embargo, ningún método de transmisión por Internet o almacenamiento electrónico es 100% seguro. Aunque nos esforzamos por proteger sus datos, no podemos garantizar su seguridad absoluta.</p>
+
+                <h2>6. Retención de Datos</h2>
+                <ul>
+                    <li><strong>Datos de ubicación:</strong> Se eliminan automáticamente después de un período determinado (configurable)</li>
+                    <li><strong>Datos de cuenta:</strong> Se conservan mientras la cuenta esté activa</li>
+                    <li><strong>Datos de actividad:</strong> Se conservan mientras la familia esté activa en la aplicación</li>
+                </ul>
+
+                <h2>7. Sus Derechos (RGPD)</h2>
+                <p>Como usuario de Familio, usted tiene los siguientes derechos:</p>
+
+                <h3>7.1. Derecho de Acceso</h3>
+                <p>Puede solicitar una copia de todos los datos personales que tenemos sobre usted.</p>
+
+                <h3>7.2. Derecho de Rectificación</h3>
+                <p>Puede corregir o actualizar sus datos personales en cualquier momento desde la aplicación o contactándonos.</p>
+
+                <h3>7.3. Derecho de Eliminación (Derecho al Olvido)</h3>
+                <p>Puede solicitar la eliminación de su cuenta y todos los datos asociados. Para hacerlo:</p>
+                <ul>
+                    <li>Desde la aplicación: Vaya a Configuración > Eliminar cuenta</li>
+                    <li>Por correo electrónico: Envíe una solicitud a <a href="mailto:jmrr.develop@gmail.com">jmrr.develop@gmail.com</a></li>
+                </ul>
+                <p><strong>Nota:</strong> La eliminación de su cuenta eliminará permanentemente:</p>
+                <ul>
+                    <li>Su perfil y datos de cuenta</li>
+                    <li>Su historial de ubicaciones</li>
+                    <li>Sus contribuciones a listas de compra y eventos</li>
+                    <li>Sus geozonas creadas</li>
+                </ul>
+
+                <h3>7.4. Derecho de Oposición</h3>
+                <p>Puede oponerse al procesamiento de sus datos personales en cualquier momento, especialmente:</p>
+                <ul>
+                    <li>Desactivando el permiso de ubicación desde los ajustes del dispositivo</li>
+                    <li>Desactivando el permiso de micrófono desde los ajustes del dispositivo</li>
+                    <li>Desactivando las notificaciones push desde la aplicación</li>
+                </ul>
+
+                <h3>7.5. Derecho de Portabilidad</h3>
+                <p>Puede solicitar una copia de sus datos en un formato estructurado y de uso común.</p>
+
+                <h3>7.6. Derecho de Retirada del Consentimiento</h3>
+                <p>Puede retirar su consentimiento en cualquier momento sin afectar a la legalidad del tratamiento basado en el consentimiento previo a su retirada.</p>
+
+                <h2>8. Menores de Edad</h2>
+                <p>Familio no está dirigida a menores de 13 años. No recopilamos intencionalmente información personal de menores de 13 años. Si descubrimos que hemos recopilado información de un menor de 13 años, eliminaremos esa información inmediatamente.</p>
+                <p>Si usted es padre o tutor y cree que su hijo menor de 13 años nos ha proporcionado información personal, contáctenos inmediatamente.</p>
+
+                <h2>9. Cambios en esta Política de Privacidad</h2>
+                <p>Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Le notificaremos cualquier cambio publicando la nueva política en esta página y actualizando la fecha de "Última actualización".</p>
+                <p>Le recomendamos que revise esta política periódicamente para estar informado sobre cómo protegemos su información.</p>
+
+                <h2>10. Contacto</h2>
+                <p>Si tiene preguntas, inquietudes o solicitudes relacionadas con esta Política de Privacidad o el tratamiento de sus datos personales, puede contactarnos:</p>
+                <p><strong>Email:</strong> <a href="mailto:jmrr.develop@gmail.com">jmrr.develop@gmail.com</a></p>
+                <p><strong>Asunto:</strong> Política de Privacidad - Familio</p>
+                <p>Nos comprometemos a responder a todas las solicitudes en un plazo máximo de 30 días.</p>
+
+                <h2>11. Base Legal para el Procesamiento (RGPD)</h2>
+                <p>Procesamos sus datos personales basándonos en:</p>
+                <ul>
+                    <li><strong>Consentimiento:</strong> Usted ha dado su consentimiento explícito para el procesamiento de sus datos personales para las finalidades específicas descritas en esta política</li>
+                    <li><strong>Ejecución de un contrato:</strong> El procesamiento es necesario para proporcionarle los servicios de la aplicación</li>
+                    <li><strong>Intereses legítimos:</strong> Para mejorar nuestros servicios y garantizar la seguridad de la aplicación</li>
+                </ul>
+
+                <h2>12. Transferencias Internacionales</h2>
+                <p>Sus datos pueden ser transferidos y almacenados en servidores ubicados fuera del Espacio Económico Europeo (EEE), específicamente en servidores de Google Cloud Platform (Estados Unidos). Estas transferencias se realizan bajo las garantías adecuadas previstas por el RGPD, incluyendo las Cláusulas Contractuales Tipo de la Comisión Europea.</p>
+
+                <hr style="margin: var(--spacing-lg) 0; border: none; border-top: 1px solid var(--color-border);">
+
+                <p style="text-align: center; color: var(--color-text-light);"><strong>Familio</strong> - Conectando familias</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="../index.html" class="footer-link">Inicio</a>
+                <a href="../familio.html" class="footer-link">Familio</a>
+                <a href="index.html" class="footer-link">Política de Privacidad General</a>
+            </nav>
+            <p class="copyright">&copy; 2025 JMR Dev. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

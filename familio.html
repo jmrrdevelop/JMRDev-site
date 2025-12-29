@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Familio - Conectando familias. Aplicación móvil para gestionar la comunicación y ubicación entre miembros de la familia">
+    <meta name="author" content="JMR Dev">
+    <title>Familio - Conectando Familias | JMR Dev</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .app-header {
+            text-align: center;
+            padding: var(--spacing-lg) 0;
+            margin-bottom: var(--spacing-lg);
+        }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto var(--spacing-md);
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .app-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-sm);
+        }
+        .app-tagline {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            margin-bottom: var(--spacing-md);
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+        }
+        .feature {
+            background-color: var(--color-bg-light);
+            padding: var(--spacing-md);
+            border-radius: 12px;
+            text-align: center;
+        }
+        .feature-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: var(--spacing-xs);
+        }
+        .feature-description {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+        }
+        .app-links {
+            text-align: center;
+            margin: var(--spacing-lg) 0;
+        }
+        .app-link {
+            display: inline-block;
+            margin: 0 var(--spacing-sm);
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--color-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .app-link:hover {
+            background-color: var(--color-text);
+            transform: translateY(-2px);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            color: var(--color-text);
+        }
+        @media (max-width: 768px) {
+            .app-title {
+                font-size: 2rem;
+            }
+            .app-icon {
+                width: 100px;
+                height: 100px;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="JMR Dev Logo" class="logo">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <a href="index.html" class="back-link">← Volver al inicio</a>
+            
+            <section class="app-header">
+                <div class="app-icon" style="background: linear-gradient(135deg, #FF8C42 0%, #FF6B1A 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem; font-weight: bold;">
+                    F
+                </div>
+                <h1 class="app-title">Familio</h1>
+                <p class="app-tagline">Conectando familias</p>
+            </section>
+
+            <section class="hero">
+                <div class="container">
+                    <p class="description">
+                        Una aplicación móvil diseñada para conectar y gestionar la comunicación entre miembros de una familia. 
+                        Comparte ubicaciones, coordina compras y mantén a tu familia conectada.
+                    </p>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <h3 class="feature-title">📍 Ubicación en Tiempo Real</h3>
+                    <p class="feature-description">Comparte tu ubicación con los miembros de tu familia y recibe alertas cuando entren o salgan de zonas definidas.</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature-title">🛒 Lista de Compra Compartida</h3>
+                    <p class="feature-description">Gestiona listas de compra familiares. Añade ítems por voz y coordina las compras entre todos.</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature-title">📅 Calendario Familiar</h3>
+                    <p class="feature-description">Coordina eventos y citas familiares en un calendario compartido para que nadie se pierda nada importante.</p>
+                </div>
+                <div class="feature">
+                    <h3 class="feature-title">🔔 Alertas Inteligentes</h3>
+                    <p class="feature-description">Recibe notificaciones cuando los miembros de tu familia entren o salgan de geozonas que hayas definido.</p>
+                </div>
+            </section>
+
+            <section class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=com.jmrdev.familio" class="app-link" target="_blank" rel="noopener noreferrer">
+                    Descargar en Google Play
+                </a>
+                <a href="privacy-policy/familio.html" class="app-link" style="background-color: var(--color-text-light);">
+                    Política de Privacidad
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <nav class="footer-nav">
+                <a href="index.html" class="footer-link">Inicio</a>
+                <a href="privacy-policy/" class="footer-link">Política de Privacidad</a>
+            </nav>
+            <p class="copyright">&copy; 2025 JMR Dev. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

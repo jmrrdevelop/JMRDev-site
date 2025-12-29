@@ -95,6 +95,21 @@ body {
     margin: 0 auto;
 }
 
+/* Apps Section */
+.apps {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    margin: var(--spacing-lg) auto;
+    max-width: 800px;
+}
+
+.apps .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+}
+
 /* Contact Section */
 .contact {
     text-align: center;
@@ -237,4 +252,5 @@ body {
     outline-offset: 4px;
     border-radius: 4px;
 }
+
 

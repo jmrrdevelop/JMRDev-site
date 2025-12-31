@@ -10,13 +10,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.logo-bg');
+            if (parallax) {
+                const speed = scrolled * 0.3;
+                parallax.style.transform = `translate(-50%, calc(-50% + ${speed}px))`;
+            }
+        });
+    </script>
 </head>
 <body>
+    <div class="parallax-background">
+        <div class="logo-bg"></div>
+    </div>
+    
     <header class="header">
         <div class="container">
-            <div class="logo-container">
-                <img src="assets/logo.svg" alt="JMR Dev Logo" class="logo">
-            </div>
         </div>
     </header>
 
